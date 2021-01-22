@@ -31,11 +31,11 @@ namespace WFinanceApp
 			//list for testing
 			List<Transaction> transactions = new List<Transaction>()
 			{
-				new Transaction() {Id=0,Description="Lunch",Amount=125f,Date="12-10-2009",Type="Expense"},
-				new Transaction() {Id=1,Description="Shopping",Amount=1250.54f,Date="5-12-2010",Type="Expense"},
-				new Transaction() {Id=2,Description="Drink",Amount=16.2f,Date="21-12-2015",Type="Expense"}
+				new Transaction() {Id=0,Description="Lunch",Amount=125f,Date=DateTime.Parse("5-12-2010"),Type="Expense"},
+				new Transaction() {Id=1,Description="Shopping",Amount=1250.54f,Date=DateTime.Now,Type="Expense"},
+				new Transaction() {Id=2,Description="Drink",Amount=16.2f,Date=DateTime.Parse("5-12-2020"),Type="Expense"}
 			};
-			transactions = transactions.OrderBy(o => o.Date).ToList();
+			transactions = transactions.OrderByDescending(o => o.Date).ToList(); //UNDONE: hide the hours and minutes part of Date
 			transactionsList.ItemsSource = transactions;
 		}
 
