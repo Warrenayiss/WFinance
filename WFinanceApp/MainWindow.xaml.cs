@@ -41,12 +41,18 @@ namespace WFinanceApp
 
 		private void AddBtn_Click(object sender, RoutedEventArgs e)
 		{
+			//require: click on button
+			//modify: create AddWindow
+			//effect: show AddWindow
 			AddWindow window = new AddWindow();
 			window.ShowDialog();
 		}
 
 		private void transactionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
+			//Require: click on listView element
+			//modify: create TransactionDetailsWindow
+			//effect: show TransactionDetailsWindow with selected element sent
 			Transaction selectedTransaction = (Transaction)transactionsList.SelectedItem;
 			if (selectedTransaction != null)
 			{

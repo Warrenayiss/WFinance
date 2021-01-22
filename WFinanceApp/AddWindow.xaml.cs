@@ -27,6 +27,9 @@ namespace WFinanceApp
 		private void Save_Click(object sender, RoutedEventArgs e)
 		{
 			//TODO: Implement Adding the information of the form in the database
+			//Requie: Click on Save button and inputs on the form
+			//Modify: Create a transaction object with form's data
+			//Effect: Add a new transaction object to the database
 
 			string amount = amountInput.Text; //getting the string from the textbox
 			float fAmount = float.Parse(amount, CultureInfo.InvariantCulture.NumberFormat); //converting the string into float
