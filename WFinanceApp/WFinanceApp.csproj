@@ -4,6 +4,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>money_xbP_icon.ico</ApplicationIcon>
+    <AssemblyName>WFinance</AssemblyName>
+    <StartupObject>WFinanceApp.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
