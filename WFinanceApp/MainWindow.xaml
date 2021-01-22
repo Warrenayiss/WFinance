@@ -24,6 +24,7 @@
                 Margin="5"/>
         <ListView x:Name="transactionsList"
                   Height="330"
+                  SelectionChanged="transactionsList_SelectionChanged"
                   Margin="20">
             <ListView.ItemTemplate>
                 <DataTemplate>

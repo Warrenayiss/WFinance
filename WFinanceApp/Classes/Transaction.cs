@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WFinanceApp.Classes
 {
-	class Transaction
+	public class Transaction
 	{
 		public int Id { get; set; }
 		public string Description { get; set; }

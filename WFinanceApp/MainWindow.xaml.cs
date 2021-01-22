@@ -44,5 +44,15 @@ namespace WFinanceApp
 			AddWindow window = new AddWindow();
 			window.ShowDialog();
 		}
+
+		private void transactionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			Transaction selectedTransaction = (Transaction)transactionsList.SelectedItem;
+			if (selectedTransaction != null)
+			{
+				TransactionDetailsWindow window = new TransactionDetailsWindow(selectedTransaction);
+				window.ShowDialog();
+			}
+		}
 	}
 }
