@@ -13,5 +13,8 @@ namespace WFinanceApp
 	/// </summary>
 	public partial class App : Application
 	{
+		public static string databaseName = "Transactions.db";
+		public static string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+		public static string databasePath = System.IO.Path.Combine(folderPath, databaseName);
 	}
 }

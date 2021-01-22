@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WFinanceApp.Classes;
+using SQLite;
 
 namespace WFinanceApp
 {
@@ -49,15 +50,22 @@ namespace WFinanceApp
 			{
 				RadioType = "Income";
 			}
-			Transaction trasaction = new Transaction()
+			Transaction transaction = new Transaction()
 			{
 				Amount = fAmount,
 				Description = descriptionInput.Text,
 				Type = RadioType,
 				Date = dateTime
 			};
-			Console.WriteLine(trasaction); //verify the proprities of the instance
+			Console.WriteLine(transaction); //verify the proprities of the instance
 
+			
+
+			using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+			{
+				connection.CreateTable<Transaction>();
+				connection.Insert(transaction);
+			}
 			//TODO: Adding the transaction instance in a database
 			Close();
 		}
