@@ -31,11 +31,11 @@ namespace WFinanceApp
 			//list for testing
 			List<Transaction> transactions = new List<Transaction>()
 			{
-				new Transaction() {Id=0,Description="azerty",Amount=125f,Date="12-10-2020",Type="Expense"},
-				new Transaction() {Id=0,Description="azerty",Amount=125f,Date="5-12-2020",Type="Expense"},
-				new Transaction() {Id=0,Description="azerty",Amount=125f,Date="21-12-2020",Type="Expense"}
+				new Transaction() {Id=0,Description="Lunch",Amount=125f,Date="12-10-2009",Type="Expense"},
+				new Transaction() {Id=1,Description="Shopping",Amount=1250.54f,Date="5-12-2010",Type="Expense"},
+				new Transaction() {Id=2,Description="Drink",Amount=16.2f,Date="21-12-2015",Type="Expense"}
 			};
-
+			transactions = transactions.OrderBy(o => o.Date).ToList();
 			transactionsList.ItemsSource = transactions;
 		}
 
