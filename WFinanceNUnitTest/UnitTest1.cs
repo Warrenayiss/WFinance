@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using WFinanceApp;
 
 namespace WFinanceNUnitTest
 {
@@ -10,9 +11,9 @@ namespace WFinanceNUnitTest
 		}
 
 		[Test]
-		public void Test1()
+		public void TestList()
 		{
-			Assert.Pass();
+			MainWindow window = new MainWindow();
 		}
 	}
 }

@@ -39,6 +39,7 @@ namespace WFinanceApp
 			transactionsList.ItemsSource = transactions;
 		}
 
+
 		private void AddBtn_Click(object sender, RoutedEventArgs e)
 		{
 			//require: click on button
