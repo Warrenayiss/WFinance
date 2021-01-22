@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,25 +8,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WFinanceApp
 {
 	/// <summary>
-	/// Interaction logic for MainWindow.xaml
+	/// Logique d'interaction pour AddWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class AddWindow : Window
 	{
-		public MainWindow()
+		public AddWindow()
 		{
 			InitializeComponent();
 		}
 
-		private void addBtn_Click(object sender, RoutedEventArgs e)
+		private void save_Click(object sender, RoutedEventArgs e)
 		{
-			AddWindow window = new AddWindow();
-			window.ShowDialog();
+
 		}
 	}
 }

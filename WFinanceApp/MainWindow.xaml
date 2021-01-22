@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WFinanceApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="500" Width="400">
+    <StackPanel>
+        <Label Content="WFinance"
+               FontSize="28"
+               Foreground="White"
+               FontWeight="Bold"
+               Background="Blue"/>
+        <Button x:Name="addBtn"
+            Content="+"
+                Click="addBtn_Click"
+                HorizontalAlignment="Right"
+                Width="40"
+                Height="40"
+                Background="CornflowerBlue"
+                Foreground="White"
+                FontSize="20"
+                Margin="5"/>
+        <ListView>
+            <Label Content="Transactions"/>
+        </ListView>
+    </StackPanel>
 </Window>
