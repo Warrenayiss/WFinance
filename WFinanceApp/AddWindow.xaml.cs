@@ -30,19 +30,28 @@ namespace WFinanceApp
 
 			string amount = amountInput.Text; //getting the string from the textbox
 			float fAmount = float.Parse(amount, CultureInfo.InvariantCulture.NumberFormat); //converting the string into float
-			string RadioType = "Expense"; 
+			string RadioType = "Expense";
+			DateTime dateTime;
+			if (datePicker.SelectedDate == null)
+			{
+				datePicker.SelectedDate = DateTime.Now;
+				dateTime = (DateTime)datePicker.SelectedDate;
+			}
+			else
+			{
+				dateTime = (DateTime)datePicker.SelectedDate;
+			}
 
 			if ((bool)incomeRadio.IsChecked) 
 			{
 				RadioType = "Income";
 			}
-
-				Transaction trasaction = new Transaction()
+			Transaction trasaction = new Transaction()
 			{
 				Amount = fAmount,
 				Description = descriptionInput.Text,
 				Type = RadioType,
-				Date = DateTime.Now
+				Date = dateTime
 			};
 			Console.WriteLine(trasaction); //verify the proprities of the instance
 
