@@ -27,7 +27,7 @@ namespace WFinanceApp
 
 		private void Save_Click(object sender, RoutedEventArgs e)
 		{
-			//TODO: Implement Adding the information of the form in the database
+			//DONE: Implement Adding the information of the form in the database
 			//Requie: Click on Save button and inputs on the form
 			//Modify: Create a transaction object with form's data
 			//Effect: Add a new transaction object to the database
@@ -57,16 +57,12 @@ namespace WFinanceApp
 				Type = RadioType,
 				Date = dateTime
 			};
-			Console.WriteLine(transaction); //verify the proprities of the instance
-
-			
 
 			using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
 			{
 				connection.CreateTable<Transaction>();
 				connection.Insert(transaction);
 			}
-			//TODO: Adding the transaction instance in a database
 			Close();
 		}
 	}

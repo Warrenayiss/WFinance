@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,16 +30,27 @@ namespace WFinanceApp
 			//TODO: Select element of the list to open the edit window
 
 			//list for testing
-			List<Transaction> transactions = new List<Transaction>()
-			{
-				new Transaction() {Id=0,Description="Lunch",Amount=125f,Date=DateTime.Parse("5-12-2010"),Type="Expense"},
-				new Transaction() {Id=1,Description="Shopping",Amount=1250.54f,Date=DateTime.Now,Type="Expense"},
-				new Transaction() {Id=2,Description="Drink",Amount=16.2f,Date=DateTime.Parse("5-12-2020"),Type="Expense"}
-			};
-			transactions = transactions.OrderByDescending(o => o.Date).ToList(); //UNDONE: hide the hours and minutes part of Date
-			transactionsList.ItemsSource = transactions;
+			ReadDatabase();
+			
 		}
 
+		void ReadDatabase()
+		{
+			//require: connection to database
+			//modify: attribute a Source to the listView
+			//Effect: connect the Transaction Table to the listView
+			using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
+			{
+				connection.CreateTable<Transaction>();
+				var transaction = connection.Table<Transaction>().ToList();
+
+				if (transaction != null)
+				{
+					transaction = transaction.OrderByDescending(o => o.Date).ToList(); //UNDONE: hide the hours and minutes part of Date
+					transactionsList.ItemsSource = transaction;
+				}
+			}
+		}
 
 		private void AddBtn_Click(object sender, RoutedEventArgs e)
 		{
