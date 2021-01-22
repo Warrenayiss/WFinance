@@ -24,7 +24,8 @@ namespace WFinanceApp
 
 		private void save_Click(object sender, RoutedEventArgs e)
 		{
-
+			//TODO: Implement Adding the information of the form in the database
+			Close();
 		}
 	}
 }
