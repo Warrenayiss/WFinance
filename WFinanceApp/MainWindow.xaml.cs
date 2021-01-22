@@ -59,6 +59,7 @@ namespace WFinanceApp
 			//effect: show AddWindow
 			AddWindow window = new AddWindow();
 			window.ShowDialog();
+			ReadDatabase();
 		}
 
 		private void transactionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -72,6 +73,7 @@ namespace WFinanceApp
 				TransactionDetailsWindow window = new TransactionDetailsWindow(selectedTransaction);
 				window.ShowDialog();
 			}
+			ReadDatabase();
 		}
 	}
 }
