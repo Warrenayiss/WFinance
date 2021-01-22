@@ -47,5 +47,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Label Content="Icons made by Freepik  from flaticon.com"
+               HorizontalAlignment="Center"
+               FontSize="5"
+               Background="Blue"/>
     </StackPanel>
 </Window>
