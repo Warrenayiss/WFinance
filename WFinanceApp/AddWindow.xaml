@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WFinanceApp"
         mc:Ignorable="d"
-        Title="Add Transaction" Height="320" Width="300">
+        Title="Add Transaction" Height="380" Width="300">
     <StackPanel>
         <Label
             Height="20"
