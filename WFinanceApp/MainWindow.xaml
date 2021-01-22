@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WFinanceApp"
+        Icon="money.ico"
         mc:Ignorable="d"
-        Icon="money_xbP_icon.ico"
         Title="Home" Height="500" Width="400">
     <StackPanel>
         <Label Content="WFinance"
@@ -25,7 +25,7 @@
                 Margin="5"/>
         <ListView x:Name="transactionsList"
                   Height="330"
-                  SelectionChanged="transactionsList_SelectionChanged"
+                  SelectionChanged="TransactionsList_SelectionChanged"
                   Margin="20">
             <ListView.ItemTemplate>
                 <DataTemplate>

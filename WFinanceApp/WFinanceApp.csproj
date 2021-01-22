@@ -2,15 +2,25 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>money_xbP_icon.ico</ApplicationIcon>
-    <AssemblyName>WFinance</AssemblyName>
-    <StartupObject>WFinanceApp.App</StartupObject>
+    <ApplicationIcon>money.ico</ApplicationIcon>
+    <AssemblyName>WFinanceApp</AssemblyName>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="money.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="money.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

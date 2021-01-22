@@ -19,7 +19,7 @@ namespace WFinanceApp
 	/// </summary>
 	public partial class TransactionDetailsWindow : Window
 	{
-		Transaction transaction;
+		readonly Transaction transaction;
 		public TransactionDetailsWindow(Transaction transaction)
 		{
 			InitializeComponent();

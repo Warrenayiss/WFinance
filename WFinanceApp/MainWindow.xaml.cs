@@ -39,16 +39,14 @@ namespace WFinanceApp
 			//require: connection to database
 			//modify: attribute a Source to the listView
 			//Effect: connect the Transaction Table to the listView
-			using (SQLiteConnection connection = new SQLiteConnection(App.databasePath))
-			{
-				connection.CreateTable<Transaction>();
-				var transaction = connection.Table<Transaction>().ToList();
+			using SQLiteConnection connection = new SQLiteConnection(App.databasePath);
+			connection.CreateTable<Transaction>();
+			var transaction = connection.Table<Transaction>().ToList();
 
-				if (transaction != null)
-				{
-					transaction = transaction.OrderByDescending(o => o.Date).ToList(); //UNDONE: hide the hours and minutes part of Date
-					transactionsList.ItemsSource = transaction;
-				}
+			if (transaction != null)
+			{
+				transaction = transaction.OrderByDescending(o => o.Date).ToList(); //UNDONE: hide the hours and minutes part of Date
+				transactionsList.ItemsSource = transaction;
 			}
 		}
 
@@ -62,7 +60,7 @@ namespace WFinanceApp
 			ReadDatabase();
 		}
 
-		private void transactionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void TransactionsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			//Require: click on listView element
 			//modify: create TransactionDetailsWindow
