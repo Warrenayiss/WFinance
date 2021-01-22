@@ -26,23 +26,27 @@ namespace WFinanceApp
 
 		private void Save_Click(object sender, RoutedEventArgs e)
 		{
-			string amount = amountInput.Text;
-			float fAmount = float.Parse(amount, CultureInfo.InvariantCulture.NumberFormat);
-			string RadioType = "Expense";
+			//TODO: Implement Adding the information of the form in the database
 
-			if ((bool)incomeRadio.IsChecked)
+			string amount = amountInput.Text; //getting the string from the textbox
+			float fAmount = float.Parse(amount, CultureInfo.InvariantCulture.NumberFormat); //converting the string into float
+			string RadioType = "Expense"; 
+
+			if ((bool)incomeRadio.IsChecked) 
 			{
 				RadioType = "Income";
 			}
 
-				//TODO: Implement Adding the information of the form in the database
 				Transaction trasaction = new Transaction()
 			{
 				Amount = fAmount,
 				Description = descriptionInput.Text,
-				Type = RadioType
+				Type = RadioType,
+				Date = DateTime.Now
 			};
-			Console.WriteLine(trasaction);
+			Console.WriteLine(trasaction); //verify the proprities of the instance
+
+			//TODO: Adding the transaction instance in a database
 			Close();
 		}
 	}

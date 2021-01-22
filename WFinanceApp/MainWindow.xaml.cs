@@ -23,6 +23,9 @@ namespace WFinanceApp
 		public MainWindow()
 		{
 			InitializeComponent();
+			//TODO: Read the list of transactions in the database 
+			//TODO: Sort the list by date
+			//TODO: Select element of the list to open the edit window
 		}
 
 		private void AddBtn_Click(object sender, RoutedEventArgs e)
