@@ -51,7 +51,7 @@ namespace WFinanceApp
 				Amount = fAmount,
 				Description = descriptionInput.Text,
 				Type = RadioType,
-				Date = dateTime
+				Date = dateTime.ToString("dd-MM-yyyy")
 			};
 			Console.WriteLine(trasaction); //verify the proprities of the instance
 

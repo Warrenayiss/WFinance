@@ -22,8 +22,8 @@
                 Foreground="White"
                 FontSize="20"
                 Margin="5"/>
-        <ListView>
-            <Label Content="Transactions"/>
+        <ListView x:Name="transactionsList">
+            
         </ListView>
     </StackPanel>
 </Window>
