@@ -14,7 +14,7 @@
                Background="Blue"/>
         <Button x:Name="addBtn"
             Content="+"
-                Click="addBtn_Click"
+                Click="AddBtn_Click"
                 HorizontalAlignment="Right"
                 Width="40"
                 Height="40"

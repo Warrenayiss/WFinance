@@ -25,7 +25,7 @@ namespace WFinanceApp
 			InitializeComponent();
 		}
 
-		private void addBtn_Click(object sender, RoutedEventArgs e)
+		private void AddBtn_Click(object sender, RoutedEventArgs e)
 		{
 			AddWindow window = new AddWindow();
 			window.ShowDialog();
